@@ -7,19 +7,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DBB36C28-6CB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CD3B90DE-9547-447D-A441-87CDD0E4CDC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.EventStore.Core", "src\Kanbersky.EventStore.Core\Kanbersky.EventStore.Core.csproj", "{51E30E1F-E1FE-43EB-8A77-EDDBF2CF9204}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.EventStore.Core", "src\Kanbersky.EventStore.Core\Kanbersky.EventStore.Core.csproj", "{51E30E1F-E1FE-43EB-8A77-EDDBF2CF9204}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.EventStore.Infrastructure", "src\Kanbersky.EventStore.Infrastructure\Kanbersky.EventStore.Infrastructure.csproj", "{5239BFE7-14A9-497C-B037-FFACC9156259}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.EventStore.Infrastructure", "src\Kanbersky.EventStore.Infrastructure\Kanbersky.EventStore.Infrastructure.csproj", "{5239BFE7-14A9-497C-B037-FFACC9156259}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.EventStore.Services", "src\Kanbersky.EventStore.Services\Kanbersky.EventStore.Services.csproj", "{026EAD4A-EF4F-4EF6-8CC3-8BD2DFE0B5B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.EventStore.Services", "src\Kanbersky.EventStore.Services\Kanbersky.EventStore.Services.csproj", "{026EAD4A-EF4F-4EF6-8CC3-8BD2DFE0B5B5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "compose", "compose", "{51B44B61-E86D-4B9C-9A46-DE460E20BC46}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.EventStore.Tests", "tests\Kanbersky.EventStore.Tests\Kanbersky.EventStore.Tests.csproj", "{6C787125-34BC-40FE-8E69-6EA62A9C010B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.EventStore.Tests", "tests\Kanbersky.EventStore.Tests\Kanbersky.EventStore.Tests.csproj", "{6C787125-34BC-40FE-8E69-6EA62A9C010B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.EventStore.Domain", "src\Kanbersky.EventStore.Domain\Kanbersky.EventStore.Domain.csproj", "{9EE2FD3A-6D6B-482C-8213-D4DB15D4109D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.EventStore.Domain", "src\Kanbersky.EventStore.Domain\Kanbersky.EventStore.Domain.csproj", "{9EE2FD3A-6D6B-482C-8213-D4DB15D4109D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.EventStore.Api", "src\Kanbersky.EventStore.Api\Kanbersky.EventStore.Api.csproj", "{4A961C50-0E90-4BFE-972A-CD9482FA8E52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kanbersky.EventStore.Api", "src\Kanbersky.EventStore.Api\Kanbersky.EventStore.Api.csproj", "{4A961C50-0E90-4BFE-972A-CD9482FA8E52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

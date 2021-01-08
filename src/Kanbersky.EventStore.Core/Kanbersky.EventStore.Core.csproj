@@ -31,7 +31,6 @@
 
   <ItemGroup>
     <Folder Include="Messaging\" />
-    <Folder Include="Results\ApiResponses\" />
   </ItemGroup>
 
 </Project>
