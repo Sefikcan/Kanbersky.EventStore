@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="EventModel\" />
+    <Folder Include="Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Kanbersky.EventStore.Core\Kanbersky.EventStore.Core.csproj" />
+    <ProjectReference Include="..\Kanbersky.EventStore.Domain\Kanbersky.EventStore.Domain.csproj" />
+    <ProjectReference Include="..\Kanbersky.EventStore.Infrastructure\Kanbersky.EventStore.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

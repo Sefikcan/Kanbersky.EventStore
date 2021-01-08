@@ -1,0 +1,12 @@
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.deps.json
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Infrastructure\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.pdb

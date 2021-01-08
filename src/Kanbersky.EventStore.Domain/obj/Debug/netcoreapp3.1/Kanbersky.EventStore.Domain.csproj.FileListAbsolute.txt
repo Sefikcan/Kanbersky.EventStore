@@ -1,0 +1,12 @@
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.deps.json
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Domain\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.csproj.CopyComplete

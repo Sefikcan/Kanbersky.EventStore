@@ -1,0 +1,16 @@
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.deps.json
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Domain.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.csproj.CopyComplete
