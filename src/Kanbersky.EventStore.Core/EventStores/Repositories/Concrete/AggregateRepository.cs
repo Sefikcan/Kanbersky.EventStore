@@ -44,7 +44,7 @@ namespace Kanbersky.EventStore.Core.EventStores.Repositories.Concrete
                     aggregate.Load(
                         version: events.Events.Last().Event.EventNumber,
                         histories: events.Events.Select(c => 
-                          JsonSerializer.Deserialize(Encoding.UTF8.GetString(c.OriginalEvent.Data),  Type.GetType(Encoding.UTF8.GetString(c.OriginalEvent.Metadata)))).ToArray());
+                          JsonSerializer.Deserialize(Encoding.UTF8.GetString(c.OriginalEvent.Data),  typeof(T))).ToArray());
                 }
 
                 nextPageStart = !events.IsEndOfStream ? events.NextEventNumber : -1;

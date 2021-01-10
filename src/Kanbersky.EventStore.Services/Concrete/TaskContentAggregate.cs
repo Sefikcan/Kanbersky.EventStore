@@ -2,6 +2,7 @@
 using Kanbersky.EventStore.Core.Results.Exceptions.Concrete;
 using Kanbersky.EventStore.Services.Abstract;
 using Kanbersky.EventStore.Services.DTO.Request;
+using Kanbersky.EventStore.Services.EventModel.TaskContent;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,14 @@ namespace Kanbersky.EventStore.Services.Concrete
 
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
+        public int Status { get; set; }
+
+        public bool IsCompleted { get; set; }
+
+        public string AssignedBy { get; set; }
+
+        public string UpdatedBy { get; set; }
+
         public void Apply(object @event)
         {
             When(@event);
@@ -30,7 +39,31 @@ namespace Kanbersky.EventStore.Services.Concrete
             if (createTaskRequest.Version >= 0)
                 throw BaseException.BadRequestException("Task already created");
 
-            Apply(createTaskRequest);
+            Apply(new CreateTaskModel 
+            {
+                AssignedBy = createTaskRequest.AssignedBy,
+                Id = createTaskRequest.Id,
+                IsCompleted = createTaskRequest.IsCompleted,
+                Status = createTaskRequest.Status,
+                Title = createTaskRequest.Title,
+                Version = createTaskRequest.Version
+            });
+        }
+
+        public void Assign(Guid id, AssignTaskRequestModel assignTaskRequestModel)
+        {
+            if (Version == -1)
+                throw BaseException.NotFoundException("Task Not Found!");
+
+            Apply(new AssignTaskModel 
+            {
+                AssignedBy = assignTaskRequestModel.AssignedBy,
+                Id = id,
+                UpdatedBy = assignTaskRequestModel.UpdatedBy,
+                IsCompleted = false,
+                Status = assignTaskRequestModel.Status,
+                Version = Version
+            });
         }
 
         public object[] GetChanges()
@@ -51,17 +84,35 @@ namespace Kanbersky.EventStore.Services.Concrete
         {
             switch (@event)
             {
-                case CreateTaskRequestModel x: OnCreated(x);
+                case CreateTaskModel x: OnCreated(x);
                     break;
-
+                case AssignTaskModel x: OnAssigned(x);
+                    break;
                 default:
                     break;
             }
         }
 
-        private void OnCreated(CreateTaskRequestModel createTaskRequest)
+        private void OnCreated(CreateTaskModel createTaskRequest)
         {
+            Id = createTaskRequest.Id;
+            Version = createTaskRequest.Version;
+            CreatedDate = DateTime.Now;
+            Status = createTaskRequest.Status;
+            AssignedBy = createTaskRequest.AssignedBy;
+            UpdatedBy = createTaskRequest.UpdatedBy;
+            IsCompleted = createTaskRequest.IsCompleted;
+        }
 
+        private void OnAssigned(AssignTaskModel assignTask)
+        {
+            Id = assignTask.Id;
+            Version = assignTask.Version;
+            CreatedDate = DateTime.Now;
+            Status = assignTask.Status;
+            AssignedBy = assignTask.AssignedBy;
+            UpdatedBy = assignTask.UpdatedBy;
+            IsCompleted = assignTask.IsCompleted;
         }
     }
 }

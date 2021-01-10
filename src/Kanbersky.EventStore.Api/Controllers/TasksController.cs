@@ -5,6 +5,7 @@ using Kanbersky.EventStore.Services.DTO.Response;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
 
 namespace Kanbersky.EventStore.Api.Controllers
@@ -34,7 +35,22 @@ namespace Kanbersky.EventStore.Api.Controllers
         public async Task<IActionResult> Create([FromBody] CreateTaskRequestModel createTaskRequest)
         {
             var response = await _mediator.Send(new CreateTaskRequest(createTaskRequest));
-            return ApiOk(response);
+            return ApiCreated(response);
+        }
+
+        /// <summary>
+        /// Assign Task Operation
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="assignRequest"></param>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("{id}")]
+        [ProducesResponseType(typeof(AssignTaskResponseModel), StatusCodes.Status200OK)]
+        public async Task<IActionResult> Assign([FromRoute] Guid id, [FromBody] AssignTaskRequestModel assignRequest)
+        {
+            var response = await _mediator.Send(new AssignTaskRequest(id, assignRequest));
+            return ApiUpdated(response);
         }
     }
 }

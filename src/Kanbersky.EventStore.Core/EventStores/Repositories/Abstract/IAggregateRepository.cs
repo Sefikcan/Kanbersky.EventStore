@@ -1,5 +1,4 @@
 ﻿using Kanbersky.EventStore.Core.EventStores.Aggregate.Abstract;
-using System;
 using System.Threading.Tasks;
 
 namespace Kanbersky.EventStore.Core.EventStores.Repositories.Abstract

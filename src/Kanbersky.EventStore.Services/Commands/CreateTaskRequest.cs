@@ -1,11 +1,9 @@
 ﻿using FluentValidation;
 using Kanbersky.EventStore.Core.EventStores.Repositories.Abstract;
-using Kanbersky.EventStore.Core.Helpers;
 using Kanbersky.EventStore.Services.Concrete;
 using Kanbersky.EventStore.Services.DTO.Request;
 using Kanbersky.EventStore.Services.DTO.Response;
 using MediatR;
-using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -46,11 +44,22 @@ namespace Kanbersky.EventStore.Services.Commands
 
         public async Task<CreateTaskResponseModel> Handle(CreateTaskRequest request, CancellationToken cancellationToken)
         {
-            var taskAggregate = await _aggregateRepository.LoadAsync(Guid.NewGuid().ToString());
+            var taskAggregate = await _aggregateRepository.LoadAsync(request.CreateTaskRequestModel.Id.ToString());
+
             taskAggregate.Create(request.CreateTaskRequestModel);
+            taskAggregate.Id = request.CreateTaskRequestModel.Id; //genel id bilgisi set edildi.
+
             await _aggregateRepository.SaveAsync(taskAggregate);
 
-            return Mapping.Map<CreateTaskRequestModel, CreateTaskResponseModel>(request.CreateTaskRequestModel);
+            return new CreateTaskResponseModel
+            {
+                AssignedBy = string.Empty,
+                Version = request.CreateTaskRequestModel.Version,
+                Id = request.CreateTaskRequestModel.Id,
+                IsCompleted = request.CreateTaskRequestModel.IsCompleted,
+                Status = (Core.Enums.TaskStatus)request.CreateTaskRequestModel.Status,
+                Title = request.CreateTaskRequestModel.Title
+            };
         }
     }
 }

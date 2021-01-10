@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EventModel\" />
     <Folder Include="Queries\" />
   </ItemGroup>
 

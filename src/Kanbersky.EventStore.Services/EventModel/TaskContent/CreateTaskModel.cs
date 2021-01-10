@@ -1,9 +1,8 @@
-﻿using Kanbersky.EventStore.Core.Enums;
-using System;
+﻿using System;
 
-namespace Kanbersky.EventStore.Services.DTO.Response
+namespace Kanbersky.EventStore.Services.EventModel.TaskContent
 {
-    public class CreateTaskResponseModel
+    public class CreateTaskModel
     {
         public Guid Id { get; set; }
 
@@ -11,10 +10,12 @@ namespace Kanbersky.EventStore.Services.DTO.Response
 
         public string Title { get; set; }
 
-        public TaskStatus Status { get; set; }
+        public int Status { get; set; }
 
         public bool IsCompleted { get; set; }
 
         public string AssignedBy { get; set; }
+
+        public string UpdatedBy { get; set; }
     }
 }
