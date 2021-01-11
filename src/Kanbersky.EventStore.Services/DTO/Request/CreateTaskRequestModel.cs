@@ -14,5 +14,7 @@ namespace Kanbersky.EventStore.Services.DTO.Request
         public int Status { get; private set; } = (int)TaskStatus.Todo;
 
         public string AssignedBy { get; private set; } = string.Empty;
+
+        public string CreatedBy { get; private set; } = "System";
     }
 }

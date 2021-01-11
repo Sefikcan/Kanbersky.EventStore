@@ -35,7 +35,7 @@ namespace Kanbersky.EventStore.Infrastructure.Extensions
                 opt.Username = couchbaseSettings.UserName;
                 opt.Password = couchbaseSettings.Password;
             });
-            services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             return services;
         }

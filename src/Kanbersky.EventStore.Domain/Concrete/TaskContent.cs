@@ -1,5 +1,4 @@
 ﻿using Kanbersky.EventStore.Core.Entity;
-using Kanbersky.EventStore.Core.Enums;
 
 namespace Kanbersky.EventStore.Domain.Concrete
 {
@@ -11,6 +10,6 @@ namespace Kanbersky.EventStore.Domain.Concrete
 
         public string AssignedTo { get; set; }
 
-        public TaskStatus Status { get; set; }
+        public int Status { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using Kanbersky.EventStore.Services.Abstract;
 using Kanbersky.EventStore.Services.Commands;
 using Kanbersky.EventStore.Services.Concrete;
+using Kanbersky.EventStore.Services.HostedServices;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -17,6 +18,8 @@ namespace Kanbersky.EventStore.Services.Extensions
             services.AddTransient<IValidator<AssignTaskRequest>, AssignTaskRequestValidator>();
             services.AddTransient<IValidator<ChangeTaskStatusRequest>, ChangeTaskStatusRequestValidator>();
             services.AddTransient<IValidator<CreateTaskRequest>, CreateTaskRequestValidator>();
+
+            services.AddHostedService<TaskContentHostedService>();
 
             services.AddScoped<ITaskContentAggregate, TaskContentAggregate>();
 

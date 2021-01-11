@@ -6,6 +6,7 @@ using Kanbersky.EventStore.Core.Models;
 using Kanbersky.EventStore.Core.Results.Exceptions.Concrete;
 using Kanbersky.EventStore.Infrastructure.Abstract;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Kanbersky.EventStore.Infrastructure.Concrete
@@ -54,6 +55,13 @@ namespace Kanbersky.EventStore.Infrastructure.Concrete
         public async Task Remove(string key)
         {
             await _bucket.RemoveAsync(key);
+        }
+
+        public async Task UpdateOneColumnAsync(string key, string column, object value)
+        {
+            await _bucket.MutateIn<T>(key)
+                           .Replace(column, value)
+                           .ExecuteAsync();
         }
 
         public async Task<T> UpsertAsync(T entity)

@@ -96,3 +96,4 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventSto
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.xml
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Api.xml
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Api.xml
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Api.MvcApplicationPartsAssemblyInfo.cs

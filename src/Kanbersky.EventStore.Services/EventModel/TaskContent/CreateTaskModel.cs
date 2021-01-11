@@ -15,5 +15,7 @@ namespace Kanbersky.EventStore.Services.EventModel.TaskContent
         public string AssignedBy { get; set; }
 
         public string UpdatedBy { get; set; }
+
+        public string CreatedBy { get; private set; } = "System";
     }
 }

@@ -8,4 +8,3 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventSto
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Core\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.pdb
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Core\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.xml
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Core\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.xml
-D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Core\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.csprojAssemblyReference.cache
