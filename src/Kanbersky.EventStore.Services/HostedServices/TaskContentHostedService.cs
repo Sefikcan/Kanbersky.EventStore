@@ -4,6 +4,7 @@ using Kanbersky.EventStore.Domain.Concrete;
 using Kanbersky.EventStore.Infrastructure.Abstract;
 using Kanbersky.EventStore.Services.EventModel.TaskContent;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Text;
 using System.Text.Json;
@@ -17,15 +18,18 @@ namespace Kanbersky.EventStore.Services.HostedServices
         private readonly IGenericRepository<TaskContent> _taskContentRepository;
         private readonly IGenericRepository<TaskPosition> _taskPositionRepository;
         private readonly IEventStoreConnection _eventStoreConnection;
+        private readonly ILogger<TaskContentHostedService> _logger;
         private EventStoreAllCatchUpSubscription _subscription;
 
         public TaskContentHostedService(IGenericRepository<TaskContent> taskContentRepository,
             IGenericRepository<TaskPosition> taskPositionRepository,
-            IEventStoreConnection eventStoreConnection)
+            IEventStoreConnection eventStoreConnection,
+            ILogger<TaskContentHostedService> logger)
         {
             _taskContentRepository = taskContentRepository;
             _taskPositionRepository = taskPositionRepository;
             _eventStoreConnection = eventStoreConnection;
+            _logger = logger;
         }
 
         public async Task StartAsync(CancellationToken cancellationToken)
@@ -50,18 +54,13 @@ namespace Kanbersky.EventStore.Services.HostedServices
                     if (@event.OriginalEvent.EventType.StartsWith("$"))
                         return;
 
-                    //Silinmiş verileri pas geçiyoruz
-                    if (@event.OriginalEvent.EventType.StartsWith("$$"))
-                        return;
-
                     try
                     {
-                        var c = Encoding.UTF8.GetString(@event.OriginalEvent.Metadata);
                         var eventType = Type.GetType(Encoding.UTF8.GetString(@event.OriginalEvent.Metadata));
                         var eventData = JsonSerializer.Deserialize(Encoding.UTF8.GetString(@event.OriginalEvent.Data), eventType);
 
-                        //if (eventType != typeof(AssignTaskModel).Name && eventType != typeof(ChangeTaskStatusModel).Name && eventType != typeof(CreateTaskModel).Name)
-                        //    return;
+                        if (eventType != typeof(AssignTaskModel) && eventType != typeof(ChangeTaskStatusModel) && eventType != typeof(CreateTaskModel))
+                            return;
 
                         Save(eventData);
 
@@ -76,7 +75,7 @@ namespace Kanbersky.EventStore.Services.HostedServices
                     }
                     catch (Exception exception)
                     {
-                        //throw BaseException.BadRequestException(exception.Message);
+                        _logger.LogError(exception, exception.Message);
                     }
                 });
         }
@@ -115,12 +114,12 @@ namespace Kanbersky.EventStore.Services.HostedServices
 
         private async void OnAssigned(AssignTaskModel @event)
         {
-            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(), "assignedTo", @event.AssignedBy);
+            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(), "assignedTo" , @event.AssignedTo);
         }
 
         private async void OnChanged(ChangeTaskStatusModel @event)
         {
-            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(),"status",@event.Status);
+            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(), "status" , @event.Status);
         }
     }
 }

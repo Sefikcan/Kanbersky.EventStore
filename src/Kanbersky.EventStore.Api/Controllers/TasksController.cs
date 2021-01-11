@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 namespace Kanbersky.EventStore.Api.Controllers
 {
     /// <summary>
-    /// 
+    /// Task Content Operation
     /// </summary>
     [Route("api/v1/tasks")]
     [ApiController]

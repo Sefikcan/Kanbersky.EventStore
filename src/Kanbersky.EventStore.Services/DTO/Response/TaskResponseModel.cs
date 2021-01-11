@@ -9,7 +9,7 @@ namespace Kanbersky.EventStore.Services.DTO.Response
 
         public int Version { get; set; }
 
-        public string AssignedBy { get; set; }
+        public string AssignedTo { get; set; }
 
         public string UpdatedBy { get; set; }
 

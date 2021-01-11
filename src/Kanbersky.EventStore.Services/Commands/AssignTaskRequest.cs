@@ -29,7 +29,7 @@ namespace Kanbersky.EventStore.Services.Commands
     {
         public AssignTaskRequestValidator()
         {
-            RuleFor(c => c.AssignTaskRequestModel.AssignedBy)
+            RuleFor(c => c.AssignTaskRequestModel.AssignedTo)
                 .NotEmpty()
                 .WithMessage("AssignedBy value cannot be empty!")
                 .NotNull()
@@ -55,7 +55,7 @@ namespace Kanbersky.EventStore.Services.Commands
 
             return new AssignTaskResponseModel
             {
-                AssignedBy = request.AssignTaskRequestModel.AssignedBy,
+                AssignedBy = request.AssignTaskRequestModel.AssignedTo,
                 Id = request.Id,
                 Status = (Core.Enums.TaskStatus)request.AssignTaskRequestModel.Status,
                 Version = taskAggregate.Version

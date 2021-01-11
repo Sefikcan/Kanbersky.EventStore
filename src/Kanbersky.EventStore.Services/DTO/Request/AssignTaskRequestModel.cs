@@ -4,7 +4,7 @@ namespace Kanbersky.EventStore.Services.DTO.Request
 {
     public class AssignTaskRequestModel
     {
-        public string AssignedBy { get; set; }
+        public string AssignedTo { get; set; }
 
         public string UpdatedBy { get; private set; } = "System";
 

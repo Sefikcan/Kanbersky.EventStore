@@ -58,7 +58,7 @@ namespace Kanbersky.EventStore.Services.Commands
             {
                 UpdatedBy = request.ChangeTaskStatusRequestModel.UpdatedBy,
                 Id = request.Id,
-                Status = (Core.Enums.TaskStatus)request.ChangeTaskStatusRequestModel.Status,
+                Status = request.ChangeTaskStatusRequestModel.Status,
                 Version = taskAggregate.Version
             };
         }

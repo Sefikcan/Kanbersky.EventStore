@@ -53,7 +53,7 @@ namespace Kanbersky.EventStore.Services.Concrete
 
             Apply(new AssignTaskModel 
             {
-                AssignedBy = assignTaskRequestModel.AssignedBy,
+                AssignedTo = assignTaskRequestModel.AssignedTo,
                 Id = id,
                 UpdatedBy = assignTaskRequestModel.UpdatedBy,
                 Status = assignTaskRequestModel.Status,
