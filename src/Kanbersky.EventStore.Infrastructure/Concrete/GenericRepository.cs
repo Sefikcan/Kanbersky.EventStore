@@ -57,10 +57,10 @@ namespace Kanbersky.EventStore.Infrastructure.Concrete
             await _bucket.RemoveAsync(key);
         }
 
-        public async Task UpdateOneColumnAsync(string key, string column, object value)
+        public async Task UpdateOneColumnAsync(string key, KeyValuePair<string,object> filter)
         {
             await _bucket.MutateIn<T>(key)
-                           .Replace(column, value)
+                           .Replace(filter.Key, filter.Value)
                            .ExecuteAsync();
         }
 

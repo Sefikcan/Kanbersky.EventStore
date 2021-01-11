@@ -1,4 +1,5 @@
 ﻿using EventStore.ClientAPI;
+using Kanbersky.EventStore.Core.Helpers;
 using Kanbersky.EventStore.Core.Results.Exceptions.Concrete;
 using Kanbersky.EventStore.Domain.Concrete;
 using Kanbersky.EventStore.Infrastructure.Abstract;
@@ -114,12 +115,12 @@ namespace Kanbersky.EventStore.Services.HostedServices
 
         private async void OnAssigned(AssignTaskModel @event)
         {
-            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(), "assignedTo" , @event.AssignedTo);
+            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(), new System.Collections.Generic.KeyValuePair<string, object>("assignedTo", @event.AssignedTo));
         }
 
         private async void OnChanged(ChangeTaskStatusModel @event)
         {
-            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(), "status" , @event.Status);
+            await _taskContentRepository.UpdateOneColumnAsync(@event.Id.ToString(), new System.Collections.Generic.KeyValuePair<string, object>("status", @event.Status));
         }
     }
 }
