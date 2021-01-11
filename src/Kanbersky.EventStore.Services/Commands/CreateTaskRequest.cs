@@ -26,10 +26,6 @@ namespace Kanbersky.EventStore.Services.Commands
             RuleFor(c => c.CreateTaskRequestModel.Title)
                 .NotNull()
                 .WithMessage("Title value cannot be null!");
-
-            RuleFor(c => c.CreateTaskRequestModel.Version)
-                .GreaterThan(-1)
-                .WithMessage("Task already created");
         }
     }
 

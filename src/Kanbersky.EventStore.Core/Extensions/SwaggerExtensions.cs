@@ -3,12 +3,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.IO;
+using System.Reflection;
 
 namespace Kanbersky.EventStore.Core.Extensions
 {
     public static class SwaggerExtensions
     {
-        public static IServiceCollection AddSwagger(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddSwagger(this IServiceCollection services, IConfiguration configuration, Assembly asm)
         {
             var swaggerSettings = new SwaggerSettings();
             configuration.GetSection(nameof(SwaggerSettings)).Bind(swaggerSettings);
@@ -23,6 +25,10 @@ namespace Kanbersky.EventStore.Core.Extensions
             {
                 c.SwaggerDoc(swaggerSettings.VersionName, swaggerSettings);
                 c.CustomSchemaIds(x => x.FullName);
+
+                var xmlFile = $"{asm.GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
 
             return services;

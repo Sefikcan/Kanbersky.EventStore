@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using System.Reflection;
 
 namespace Kanbersky.EventStore.Api
 {
@@ -27,12 +28,10 @@ namespace Kanbersky.EventStore.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                .AddSwagger(Configuration)
+                .AddSwagger(Configuration, Assembly.GetExecutingAssembly())
                 .AddCore();
 
             services.AddInfrastructure(Configuration);
-
-            services.AddMediatR(typeof(CreateTaskRequest));
 
             services.AddServiceLayer();
 

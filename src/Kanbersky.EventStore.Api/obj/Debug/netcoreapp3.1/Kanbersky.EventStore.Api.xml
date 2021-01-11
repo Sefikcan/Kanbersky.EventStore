@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kanbersky.EventStore.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Kanbersky.EventStore.Api.Controllers.TasksController.#ctor(MediatR.IMediator)">
+            <summary>
+            ctor
+            </summary>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Kanbersky.EventStore.Api.Controllers.TasksController.Create(Kanbersky.EventStore.Services.DTO.Request.CreateTaskRequestModel)">
+            <summary>
+            Create Task Operation
+            </summary>
+            <param name="createTaskRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanbersky.EventStore.Api.Controllers.TasksController.Assign(System.Guid,Kanbersky.EventStore.Services.DTO.Request.AssignTaskRequestModel)">
+            <summary>
+            Assign Task Operation
+            </summary>
+            <param name="id"></param>
+            <param name="assignRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanbersky.EventStore.Api.Controllers.TasksController.ChangeTaskStatus(System.Guid,Kanbersky.EventStore.Services.DTO.Request.ChangeTaskStatusRequestModel)">
+            <summary>
+            Change Status Operation
+            </summary>
+            <param name="id"></param>
+            <param name="changeTaskStatusRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanbersky.EventStore.Api.Controllers.TasksController.Get(System.Guid)">
+            <summary>
+            Get By Id operation
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace Kanbersky.EventStore.Api.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/v1/tasks")]
     [ApiController]
     public class TasksController : KanberskyControllerBase
@@ -66,6 +69,18 @@ namespace Kanbersky.EventStore.Api.Controllers
         {
             var response = await _mediator.Send(new ChangeTaskStatusRequest(id, changeTaskStatusRequest));
             return ApiUpdated(response);
+        }
+
+        /// <summary>
+        /// Get By Id operation
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> Get(Guid id)
+        {
+            return ApiOk();
         }
     }
 }

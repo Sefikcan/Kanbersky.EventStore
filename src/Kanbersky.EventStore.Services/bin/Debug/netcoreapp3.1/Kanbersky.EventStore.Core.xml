@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Kanbersky.EventStore.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Kanbersky.EventStore.Core.EventStores.Repositories.Concrete.AggregateRepository`1.LoadAsync(System.String)">
+            <summary>
+            Event store'dan event alır
+            </summary>
+            <param name="aggregateId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanbersky.EventStore.Core.EventStores.Repositories.Concrete.AggregateRepository`1.SaveAsync(`0)">
+            <summary>
+            Event store'a event gönderir
+            </summary>
+            <param name="aggregate"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

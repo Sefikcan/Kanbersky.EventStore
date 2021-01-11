@@ -14,3 +14,4 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventSto
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Infrastructure.pdb
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.csprojAssemblyReference.cache
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Services.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Services\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Core.xml
