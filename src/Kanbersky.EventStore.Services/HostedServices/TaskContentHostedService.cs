@@ -1,5 +1,4 @@
 ﻿using EventStore.ClientAPI;
-using Kanbersky.EventStore.Core.Helpers;
 using Kanbersky.EventStore.Core.Results.Exceptions.Concrete;
 using Kanbersky.EventStore.Domain.Concrete;
 using Kanbersky.EventStore.Infrastructure.Abstract;
@@ -14,6 +13,9 @@ using System.Threading.Tasks;
 
 namespace Kanbersky.EventStore.Services.HostedServices
 {
+    /// <summary>
+    /// Akışı Test için yazıldı
+    /// </summary>
     public class TaskContentHostedService : IHostedService
     {
         private readonly IGenericRepository<TaskContent> _taskContentRepository;
