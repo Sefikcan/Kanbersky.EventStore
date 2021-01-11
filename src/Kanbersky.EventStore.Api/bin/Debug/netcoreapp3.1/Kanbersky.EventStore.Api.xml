@@ -4,6 +4,11 @@
         <name>Kanbersky.EventStore.Api</name>
     </assembly>
     <members>
+        <member name="T:Kanbersky.EventStore.Api.Controllers.TasksController">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:Kanbersky.EventStore.Api.Controllers.TasksController.#ctor(MediatR.IMediator)">
             <summary>
             ctor

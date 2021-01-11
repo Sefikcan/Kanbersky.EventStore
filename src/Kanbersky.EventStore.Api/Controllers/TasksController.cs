@@ -2,6 +2,7 @@
 using Kanbersky.EventStore.Services.Commands;
 using Kanbersky.EventStore.Services.DTO.Request;
 using Kanbersky.EventStore.Services.DTO.Response;
+using Kanbersky.EventStore.Services.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -78,9 +79,11 @@ namespace Kanbersky.EventStore.Api.Controllers
         /// <returns></returns>
         [HttpGet]
         [Route("{id}")]
+        [ProducesResponseType(typeof(TaskResponseModel), StatusCodes.Status200OK)]
         public async Task<IActionResult> Get(Guid id)
         {
-            return ApiOk();
+            var response = await _mediator.Send(new GetTaskByIdRequest(id));
+            return ApiOk(response);
         }
     }
 }
