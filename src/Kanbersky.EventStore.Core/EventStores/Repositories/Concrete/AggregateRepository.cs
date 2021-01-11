@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Kanbersky.EventStore.Core.EventStores.Repositories.Concrete
 {
     //TODO: Refactor
-    public class AggregateRepository<T> : IAggregateRepository<T> where T : BaseAggregate, IAggregate, new()
+    public class AggregateRepository<T> : IAggregateRepository<T> where T : IAggregate, new()
     {
         private readonly IEventStoreConnection _eventStore;
 

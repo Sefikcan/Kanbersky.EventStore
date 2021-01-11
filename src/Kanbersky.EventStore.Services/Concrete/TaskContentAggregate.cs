@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace Kanbersky.EventStore.Services.Concrete
 {
-    public class TaskContentAggregate : BaseAggregate, IAggregate, ITaskContentAggregate
+    public class TaskContentAggregate : IAggregate, ITaskContentAggregate
     {
         //İlgili aggragete'e ait event'leri store edeceğimiz değişken
         private readonly IList<object> _changes = new List<object>();
@@ -28,7 +28,6 @@ namespace Kanbersky.EventStore.Services.Concrete
 
         public void Apply(object @event)
         {
-            When(@event);
             _changes.Add(@event);
         }
 
@@ -84,43 +83,6 @@ namespace Kanbersky.EventStore.Services.Concrete
         public void Load(long version, IEnumerable<object> histories)
         {
             Version = version;
-            foreach (var history in histories)
-            {
-                When(history);
-            }
-        }
-
-        protected override void When(object @event)
-        {
-            switch (@event)
-            {
-                case CreateTaskModel x: OnCreated(x);
-                    break;
-                case AssignTaskModel x: OnAssigned(x);
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        private void OnCreated(CreateTaskModel createTaskRequest)
-        {
-            Id = createTaskRequest.Id;
-            Version = createTaskRequest.Version;
-            CreatedDate = DateTime.Now;
-            Status = createTaskRequest.Status;
-            AssignedBy = createTaskRequest.AssignedBy;
-            UpdatedBy = createTaskRequest.UpdatedBy;
-        }
-
-        private void OnAssigned(AssignTaskModel assignTask)
-        {
-            Id = assignTask.Id;
-            Version = assignTask.Version;
-            CreatedDate = DateTime.Now;
-            Status = assignTask.Status;
-            AssignedBy = assignTask.AssignedBy;
-            UpdatedBy = assignTask.UpdatedBy;
         }
     }
 }
