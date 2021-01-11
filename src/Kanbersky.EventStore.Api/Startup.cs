@@ -4,6 +4,7 @@ using Kanbersky.EventStore.Infrastructure.Extensions;
 using Kanbersky.EventStore.Services.Abstract;
 using Kanbersky.EventStore.Services.Commands;
 using Kanbersky.EventStore.Services.Concrete;
+using Kanbersky.EventStore.Services.Extensions;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,7 +34,7 @@ namespace Kanbersky.EventStore.Api
 
             services.AddMediatR(typeof(CreateTaskRequest));
 
-            services.AddScoped<ITaskContentAggregate, TaskContentAggregate>();
+            services.AddServiceLayer();
 
             services.AddControllers()
                 .AddFluentValidation();

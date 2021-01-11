@@ -11,8 +11,6 @@ namespace Kanbersky.EventStore.Domain.Concrete
 
         public string AssignedTo { get; set; }
 
-        public string CompletedBy { get; set; }
-
         public TaskStatus Status { get; set; }
     }
 }

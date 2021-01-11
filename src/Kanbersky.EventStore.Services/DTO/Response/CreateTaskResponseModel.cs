@@ -13,8 +13,6 @@ namespace Kanbersky.EventStore.Services.DTO.Response
 
         public TaskStatus Status { get; set; }
 
-        public bool IsCompleted { get; set; }
-
         public string AssignedBy { get; set; }
     }
 }

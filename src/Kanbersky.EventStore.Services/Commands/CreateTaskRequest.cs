@@ -56,7 +56,6 @@ namespace Kanbersky.EventStore.Services.Commands
                 AssignedBy = string.Empty,
                 Version = request.CreateTaskRequestModel.Version,
                 Id = request.CreateTaskRequestModel.Id,
-                IsCompleted = request.CreateTaskRequestModel.IsCompleted,
                 Status = (Core.Enums.TaskStatus)request.CreateTaskRequestModel.Status,
                 Title = request.CreateTaskRequestModel.Title
             };

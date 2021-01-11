@@ -52,5 +52,20 @@ namespace Kanbersky.EventStore.Api.Controllers
             var response = await _mediator.Send(new AssignTaskRequest(id, assignRequest));
             return ApiUpdated(response);
         }
+
+        /// <summary>
+        /// Change Status Operation
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="changeTaskStatusRequest"></param>
+        /// <returns></returns>
+        [HttpPut]
+        [Route("{id}/change-status")]
+        [ProducesResponseType(typeof(ChangeTaskStatusResponseModel), StatusCodes.Status200OK)]
+        public async Task<IActionResult> ChangeTaskStatus([FromRoute] Guid id, [FromBody] ChangeTaskStatusRequestModel changeTaskStatusRequest)
+        {
+            var response = await _mediator.Send(new ChangeTaskStatusRequest(id, changeTaskStatusRequest));
+            return ApiUpdated(response);
+        }
     }
 }

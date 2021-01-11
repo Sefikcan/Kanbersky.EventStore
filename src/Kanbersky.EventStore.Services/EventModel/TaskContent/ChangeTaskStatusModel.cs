@@ -2,7 +2,7 @@
 
 namespace Kanbersky.EventStore.Services.EventModel.TaskContent
 {
-    public class AssignTaskModel
+    public class ChangeTaskStatusModel
     {
         public Guid Id { get; set; }
 
@@ -10,8 +10,6 @@ namespace Kanbersky.EventStore.Services.EventModel.TaskContent
 
         public int Status { get; set; }
 
-        public string AssignedBy { get; set; }
-
-        public string UpdatedBy { get; set; }
+        public string UpdatedBy { get; set; } = "System";
     }
 }

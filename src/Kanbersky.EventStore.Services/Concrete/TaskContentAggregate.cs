@@ -22,8 +22,6 @@ namespace Kanbersky.EventStore.Services.Concrete
 
         public int Status { get; set; }
 
-        public bool IsCompleted { get; set; }
-
         public string AssignedBy { get; set; }
 
         public string UpdatedBy { get; set; }
@@ -43,7 +41,6 @@ namespace Kanbersky.EventStore.Services.Concrete
             {
                 AssignedBy = createTaskRequest.AssignedBy,
                 Id = createTaskRequest.Id,
-                IsCompleted = createTaskRequest.IsCompleted,
                 Status = createTaskRequest.Status,
                 Title = createTaskRequest.Title,
                 Version = createTaskRequest.Version
@@ -60,8 +57,21 @@ namespace Kanbersky.EventStore.Services.Concrete
                 AssignedBy = assignTaskRequestModel.AssignedBy,
                 Id = id,
                 UpdatedBy = assignTaskRequestModel.UpdatedBy,
-                IsCompleted = false,
                 Status = assignTaskRequestModel.Status,
+                Version = Version
+            });
+        }
+
+        public void ChangeStatus(Guid id, ChangeTaskStatusRequestModel changeTaskStatusRequest)
+        {
+            if (Version == -1)
+                throw BaseException.NotFoundException("Task Not Found!");
+
+            Apply(new ChangeTaskStatusModel
+            {
+                Id = id,
+                UpdatedBy = changeTaskStatusRequest.UpdatedBy,
+                Status = (int)changeTaskStatusRequest.Status,
                 Version = Version
             });
         }
@@ -101,7 +111,6 @@ namespace Kanbersky.EventStore.Services.Concrete
             Status = createTaskRequest.Status;
             AssignedBy = createTaskRequest.AssignedBy;
             UpdatedBy = createTaskRequest.UpdatedBy;
-            IsCompleted = createTaskRequest.IsCompleted;
         }
 
         private void OnAssigned(AssignTaskModel assignTask)
@@ -112,7 +121,6 @@ namespace Kanbersky.EventStore.Services.Concrete
             Status = assignTask.Status;
             AssignedBy = assignTask.AssignedBy;
             UpdatedBy = assignTask.UpdatedBy;
-            IsCompleted = assignTask.IsCompleted;
         }
     }
 }

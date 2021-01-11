@@ -3,14 +3,14 @@ using System;
 
 namespace Kanbersky.EventStore.Services.DTO.Response
 {
-    public class AssignTaskResponseModel
+    public class ChangeTaskStatusResponseModel
     {
+        public string UpdatedBy { get; set; }
+
         public Guid Id { get; set; }
 
         public long Version { get; set; }
 
         public TaskStatus Status { get; set; }
-
-        public string AssignedBy { get; set; }
     }
 }

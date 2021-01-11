@@ -8,5 +8,7 @@ namespace Kanbersky.EventStore.Services.Abstract
         void Create(CreateTaskRequestModel createTaskRequest);
 
         void Assign(Guid id, AssignTaskRequestModel assignTaskRequestModel);
+
+        void ChangeStatus(Guid id, ChangeTaskStatusRequestModel changeTaskStatusRequest);
     }
 }

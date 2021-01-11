@@ -13,8 +13,6 @@ namespace Kanbersky.EventStore.Services.DTO.Request
 
         public int Status { get; private set; } = (int)TaskStatus.Todo;
 
-        public bool IsCompleted { get; private set; } = false;
-
         public string AssignedBy { get; private set; } = string.Empty;
     }
 }
