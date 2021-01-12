@@ -42,14 +42,11 @@ namespace Kanbersky.EventStore.Services.Commands
 
     public class ChangeTaskStatusRequestHandler : IRequestHandler<ChangeTaskStatusRequest, ChangeTaskStatusResponseModel>
     {
-        private readonly IEventListener _eventListener;
         private readonly IAggregateRepository<TaskContentAggregate> _aggregateRepository;
 
-        public ChangeTaskStatusRequestHandler(IAggregateRepository<TaskContentAggregate> aggregateRepository,
-            IEventListener eventListener)
+        public ChangeTaskStatusRequestHandler(IAggregateRepository<TaskContentAggregate> aggregateRepository)
         {
             _aggregateRepository = aggregateRepository;
-            _eventListener = eventListener;
         }
 
         public async Task<ChangeTaskStatusResponseModel> Handle(ChangeTaskStatusRequest request, CancellationToken cancellationToken)
@@ -58,12 +55,6 @@ namespace Kanbersky.EventStore.Services.Commands
             taskAggregate.ChangeStatus(request.Id, request.ChangeTaskStatusRequestModel);
             taskAggregate.Id = request.Id; //genel id bilgisi set edildi.
             await _aggregateRepository.SaveAsync(taskAggregate);
-
-            await _eventListener.Publish(new ChangeTaskStatusEventModel
-            {
-                Status = (int)request.ChangeTaskStatusRequestModel.Status,
-                TaskId = request.Id
-            });
 
             return new ChangeTaskStatusResponseModel
             {

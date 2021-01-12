@@ -1,0 +1,346 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Consumer\\Kanbersky.EventStore.Consumer.csproj": {}
+  },
+  "projects": {
+    "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Consumer\\Kanbersky.EventStore.Consumer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Consumer\\Kanbersky.EventStore.Consumer.csproj",
+        "projectName": "Kanbersky.EventStore.Consumer",
+        "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Consumer\\Kanbersky.EventStore.Consumer.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Consumer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj": {
+                "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj"
+              },
+              "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Domain\\Kanbersky.EventStore.Domain.csproj": {
+                "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Domain\\Kanbersky.EventStore.Domain.csproj"
+              },
+              "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Infrastructure\\Kanbersky.EventStore.Infrastructure.csproj": {
+                "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Infrastructure\\Kanbersky.EventStore.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj",
+        "projectName": "Kanbersky.EventStore.Core",
+        "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Couchbase.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            },
+            "Elastic.Apm.NetCoreAll": {
+              "target": "Package",
+              "version": "[1.7.1, )"
+            },
+            "EventStore.Client": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.3.0, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.OpenApi": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.1, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Enrichers.CorrelationId": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Exceptions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[3.0.1, )"
+            },
+            "Serilog.Sinks.Elasticsearch": {
+              "target": "Package",
+              "version": "[8.2.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Domain\\Kanbersky.EventStore.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Domain\\Kanbersky.EventStore.Domain.csproj",
+        "projectName": "Kanbersky.EventStore.Domain",
+        "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Domain\\Kanbersky.EventStore.Domain.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj": {
+                "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Infrastructure\\Kanbersky.EventStore.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Infrastructure\\Kanbersky.EventStore.Infrastructure.csproj",
+        "projectName": "Kanbersky.EventStore.Infrastructure",
+        "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Infrastructure\\Kanbersky.EventStore.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj": {
+                "projectPath": "D:\\WorkSpaces\\Back-end\\Microservices\\Kanbersky.EventStore\\src\\Kanbersky.EventStore.Core\\Kanbersky.EventStore.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Couchbase.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

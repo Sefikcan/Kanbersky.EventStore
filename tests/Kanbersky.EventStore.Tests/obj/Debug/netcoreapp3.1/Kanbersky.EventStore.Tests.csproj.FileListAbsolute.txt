@@ -94,3 +94,4 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\tests\Kanbersky.EventS
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\tests\Kanbersky.EventStore.Tests\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Tests.dll
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\tests\Kanbersky.EventStore.Tests\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Tests.pdb
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\tests\Kanbersky.EventStore.Tests\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Tests.genruntimeconfig.cache
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\tests\Kanbersky.EventStore.Tests\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Tests.csprojAssemblyReference.cache

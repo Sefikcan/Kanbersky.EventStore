@@ -41,14 +41,11 @@ namespace Kanbersky.EventStore.Services.Commands
 
     public class AssignTaskRequestHandler : IRequestHandler<AssignTaskRequest, AssignTaskResponseModel>
     {
-        private readonly IEventListener _eventListener;
         private readonly IAggregateRepository<TaskContentAggregate> _aggregateRepository;
 
-        public AssignTaskRequestHandler(IAggregateRepository<TaskContentAggregate> aggregateRepository,
-            IEventListener eventListener)
+        public AssignTaskRequestHandler(IAggregateRepository<TaskContentAggregate> aggregateRepository)
         {
             _aggregateRepository = aggregateRepository;
-            _eventListener = eventListener;
         }
 
         public async Task<AssignTaskResponseModel> Handle(AssignTaskRequest request, CancellationToken cancellationToken)
@@ -57,12 +54,6 @@ namespace Kanbersky.EventStore.Services.Commands
             taskAggregate.Assign(request.Id ,request.AssignTaskRequestModel);
             taskAggregate.Id = request.Id; //genel id bilgisi set edildi.
             await _aggregateRepository.SaveAsync(taskAggregate);
-
-            await _eventListener.Publish(new AssignTaskEventModel
-            {
-                AssignedTo = request.AssignTaskRequestModel.AssignedTo,
-                TaskId = request.Id
-            });
 
             return new AssignTaskResponseModel
             {

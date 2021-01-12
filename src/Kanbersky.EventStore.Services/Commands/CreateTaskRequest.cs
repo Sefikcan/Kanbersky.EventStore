@@ -52,15 +52,6 @@ namespace Kanbersky.EventStore.Services.Commands
 
             await _aggregateRepository.SaveAsync(taskAggregate);
 
-            await _eventListener.Publish(new CreateTaskEventModel
-            {
-                AssignedBy = request.CreateTaskRequestModel.AssignedBy,
-                CreatedBy = request.CreateTaskRequestModel.CreatedBy,
-                Status = request.CreateTaskRequestModel.Status,
-                TaskId = request.CreateTaskRequestModel.Id,
-                Title = request.CreateTaskRequestModel.Title
-            });
-
             return new CreateTaskResponseModel
             {
                 AssignedBy = string.Empty,
