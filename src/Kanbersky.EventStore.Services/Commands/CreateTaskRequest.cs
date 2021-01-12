@@ -1,5 +1,7 @@
 ﻿using FluentValidation;
 using Kanbersky.EventStore.Core.EventStores.Repositories.Abstract;
+using Kanbersky.EventStore.Core.Messaging.Abstract;
+using Kanbersky.EventStore.Domain.EventModel;
 using Kanbersky.EventStore.Services.Concrete;
 using Kanbersky.EventStore.Services.DTO.Request;
 using Kanbersky.EventStore.Services.DTO.Response;
@@ -32,10 +34,13 @@ namespace Kanbersky.EventStore.Services.Commands
     public class CreateTaskRequestHandler : IRequestHandler<CreateTaskRequest, CreateTaskResponseModel>
     {
         private readonly IAggregateRepository<TaskContentAggregate> _aggregateRepository;
+        private readonly IEventListener _eventListener;
 
-        public CreateTaskRequestHandler(IAggregateRepository<TaskContentAggregate> aggregateRepository)
+        public CreateTaskRequestHandler(IAggregateRepository<TaskContentAggregate> aggregateRepository,
+            IEventListener eventListener)
         {
             _aggregateRepository = aggregateRepository;
+            _eventListener = eventListener;
         }
 
         public async Task<CreateTaskResponseModel> Handle(CreateTaskRequest request, CancellationToken cancellationToken)
@@ -46,6 +51,15 @@ namespace Kanbersky.EventStore.Services.Commands
             taskAggregate.Id = request.CreateTaskRequestModel.Id; //genel id bilgisi set edildi.
 
             await _aggregateRepository.SaveAsync(taskAggregate);
+
+            await _eventListener.Publish(new CreateTaskEventModel
+            {
+                AssignedBy = request.CreateTaskRequestModel.AssignedBy,
+                CreatedBy = request.CreateTaskRequestModel.CreatedBy,
+                Status = request.CreateTaskRequestModel.Status,
+                TaskId = request.CreateTaskRequestModel.Id,
+                Title = request.CreateTaskRequestModel.Title
+            });
 
             return new CreateTaskResponseModel
             {

@@ -1,17 +1,18 @@
-﻿using MediatR;
-using System;
+﻿using Kanbersky.EventStore.Core.Messaging.Models;
 using System.Threading.Tasks;
 
 namespace Kanbersky.EventStore.Core.Messaging.Abstract
 {
     public interface IEventListener
     {
-        void Subscribe(Type type);
+        Task Publish<T>(T model) where T : BaseMessagingModel;
 
-        void Subscribe<TEvent>() where TEvent : INotification;
+        void Subscribe<T, THandler>()
+            where T : BaseMessagingModel
+            where THandler : IEventHandler<T>;
 
-        Task Publish<TEvent>(TEvent @event) where TEvent : INotification;
-
-        Task Publish(string message, string type);
+        void UnSubscribe<T, THandler>()
+            where T : BaseMessagingModel
+            where THandler : IEventHandler<T>;
     }
 }

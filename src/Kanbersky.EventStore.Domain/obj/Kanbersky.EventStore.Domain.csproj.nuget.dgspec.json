@@ -64,6 +64,14 @@
               "target": "Package",
               "version": "[9.3.0, )"
             },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[7.1.2, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -83,6 +91,10 @@
             "Microsoft.OpenApi": {
               "target": "Package",
               "version": "[1.2.3, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.1, )"
             },
             "Serilog": {
               "target": "Package",

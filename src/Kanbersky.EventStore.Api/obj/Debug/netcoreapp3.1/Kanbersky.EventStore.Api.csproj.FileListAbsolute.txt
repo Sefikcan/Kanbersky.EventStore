@@ -97,3 +97,12 @@ D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventSto
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\Kanbersky.EventStore.Api.xml
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Api.xml
 D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\obj\Debug\netcoreapp3.1\Kanbersky.EventStore.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\Automatonymous.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\GreenPipes.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\MassTransit.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\MassTransit.RabbitMqTransport.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\NewId.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\RabbitMQ.Client.dll
+D:\WorkSpaces\Back-end\Microservices\Kanbersky.EventStore\src\Kanbersky.EventStore.Api\bin\Debug\netcoreapp3.1\System.Threading.Channels.dll

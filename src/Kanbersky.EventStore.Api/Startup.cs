@@ -1,11 +1,7 @@
 using FluentValidation.AspNetCore;
 using Kanbersky.EventStore.Core.Extensions;
 using Kanbersky.EventStore.Infrastructure.Extensions;
-using Kanbersky.EventStore.Services.Abstract;
-using Kanbersky.EventStore.Services.Commands;
-using Kanbersky.EventStore.Services.Concrete;
 using Kanbersky.EventStore.Services.Extensions;
-using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,7 +25,7 @@ namespace Kanbersky.EventStore.Api
         {
             services
                 .AddSwagger(Configuration, Assembly.GetExecutingAssembly())
-                .AddCore();
+                .AddCore(Configuration);
 
             services.AddInfrastructure(Configuration);
 

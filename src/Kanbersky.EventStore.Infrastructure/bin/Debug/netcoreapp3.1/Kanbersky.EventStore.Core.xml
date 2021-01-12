@@ -18,5 +18,89 @@
             <param name="aggregate"></param>
             <returns></returns>
         </member>
+        <member name="T:Kanbersky.EventStore.Core.Messaging.Concrete.RabbitMQ.RabbitMQListener">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Kanbersky.EventStore.Core.Messaging.Concrete.RabbitMQ.RabbitMQListener.#ctor(Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings,System.IServiceProvider)">
+            <summary>
+            ctor
+            </summary>
+            <param name="massTransitSettings"></param>
+            <param name="serviceProvider"></param>
+        </member>
+        <member name="M:Kanbersky.EventStore.Core.Messaging.Concrete.RabbitMQ.RabbitMQListener.Publish``1(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Kanbersky.EventStore.Core.Messaging.Concrete.RabbitMQ.RabbitMQListener.Subscribe``2">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="THandler"></typeparam>
+        </member>
+        <member name="M:Kanbersky.EventStore.Core.Messaging.Concrete.RabbitMQ.RabbitMQListener.UnSubscribe``2">
+            <summary>
+            
+            </summary>
+            <typeparam name="T"></typeparam>
+            <typeparam name="THandler"></typeparam>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.MassTransitUri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.TripThreshold">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.ActiveThreshold">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.ResetInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.RateLimit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.RateLimiterInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.TrackingPeriod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Kanbersky.EventStore.Core.Settings.Concrete.MassTransitSettings.MessageRetryCount">
+            <summary>
+            
+            </summary>
+        </member>
     </members>
 </doc>

@@ -200,7 +200,7 @@
           "System.Linq.Expressions.Reference": "4.2.2.0",
           "System.Linq.Parallel": "4.0.4.0",
           "System.Linq.Queryable": "4.0.4.0",
-          "System.Memory": "4.2.1.0",
+          "System.Memory.Reference": "4.2.1.0",
           "System.Net": "4.0.0.0",
           "System.Net.Http.Reference": "4.2.2.0",
           "System.Net.HttpListener": "4.0.2.0",
@@ -242,7 +242,7 @@
           "System.Runtime.InteropServices.RuntimeInformation.Reference": "4.0.4.0",
           "System.Runtime.InteropServices.WindowsRuntime": "4.0.4.0",
           "System.Runtime.Intrinsics": "4.0.1.0",
-          "System.Runtime.Loader": "4.1.1.0",
+          "System.Runtime.Loader.Reference": "4.1.1.0",
           "System.Runtime.Numerics.Reference": "4.1.2.0",
           "System.Runtime.Serialization": "4.0.0.0",
           "System.Runtime.Serialization.Formatters": "4.0.4.0",
@@ -271,7 +271,6 @@
           "System.Text.Encodings.Web.Reference": "4.0.5.0",
           "System.Text.Json": "4.0.1.0",
           "System.Text.RegularExpressions.Reference": "4.2.2.0",
-          "System.Threading.Channels": "4.0.2.0",
           "System.Threading.Reference": "4.1.2.0",
           "System.Threading.Overlapped": "4.1.2.0",
           "System.Threading.Tasks.Dataflow.Reference": "4.6.5.0",
@@ -283,7 +282,7 @@
           "System.Threading.Timer.Reference": "4.1.2.0",
           "System.Transactions": "4.0.0.0",
           "System.Transactions.Local": "4.0.2.0",
-          "System.ValueTuple": "4.0.3.0",
+          "System.ValueTuple.Reference": "4.0.3.0",
           "System.Web": "4.0.0.0",
           "System.Web.HttpUtility": "4.0.2.0",
           "System.Windows": "4.0.0.0",
@@ -319,6 +318,20 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "Automatonymous/5.1.0": {
+        "dependencies": {
+          "GreenPipes": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Automatonymous.dll": {
+            "assemblyVersion": "5.1.0.0",
+            "fileVersion": "5.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Automatonymous.dll": {}
         }
       },
       "Ben.Demystifier/0.1.6": {
@@ -585,6 +598,63 @@
           "lib/netstandard2.0/FluentValidation.DependencyInjectionExtensions.dll": {}
         }
       },
+      "GreenPipes/4.0.0": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
+          "System.Reflection.Emit": "4.7.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/GreenPipes.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/GreenPipes.dll": {}
+        }
+      },
+      "MassTransit/7.1.2": {
+        "dependencies": {
+          "Automatonymous": "5.1.0",
+          "Microsoft.Extensions.Logging.Abstractions": "3.1.2",
+          "NewId": "3.0.3",
+          "Newtonsoft.Json": "11.0.2",
+          "Newtonsoft.Json.Bson": "1.0.1",
+          "System.Diagnostics.DiagnosticSource": "5.0.0",
+          "System.Reflection.Emit": "4.7.0",
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Runtime.Loader": "4.3.0",
+          "System.Threading.Channels": "4.7.1",
+          "System.Threading.ThreadPool": "4.3.0",
+          "System.ValueTuple": "4.5.0",
+          "System.Xml.ReaderWriter": "4.3.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MassTransit.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MassTransit.dll": {}
+        }
+      },
+      "MassTransit.RabbitMQ/7.1.2": {
+        "dependencies": {
+          "MassTransit": "7.1.2",
+          "RabbitMQ.Client": "6.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {
+            "assemblyVersion": "7.1.2.0",
+            "fileVersion": "7.1.2.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/MassTransit.RabbitMqTransport.dll": {}
+        }
+      },
       "MediatR/9.0.0": {
         "runtime": {
           "lib/netstandard2.1/MediatR.dll": {
@@ -635,6 +705,17 @@
         "dependencies": {
           "Microsoft.Net.Http.Headers": "2.2.0",
           "System.Text.Encodings.Web": "4.5.0"
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "4.700.20.21406"
+          }
+        },
+        "compile": {
+          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "Microsoft.CSharp/4.7.0": {},
@@ -928,8 +1009,19 @@
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
           "System.Threading.Timer": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.1",
           "System.Xml.XDocument": "4.3.0"
+        }
+      },
+      "NewId/3.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/NewId.dll": {
+            "assemblyVersion": "3.0.3.0",
+            "fileVersion": "3.0.3.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NewId.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -941,6 +1033,21 @@
         },
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "Newtonsoft.Json.Bson/1.0.1": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.1.20722"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
       "OpenTracing.Signed/0.10.4": {
@@ -969,6 +1076,21 @@
         },
         "compile": {
           "lib/netcoreapp2.1/protobuf-net.dll": {}
+        }
+      },
+      "RabbitMQ.Client/6.2.1": {
+        "dependencies": {
+          "System.Memory": "4.5.4",
+          "System.Threading.Channels": "4.7.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -1525,7 +1647,7 @@
           "System.Reflection": "4.3.0",
           "System.Reflection.Emit": "4.7.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.7.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Reflection.TypeExtensions": "4.7.0",
@@ -1535,6 +1657,7 @@
           "System.Threading": "4.3.0"
         }
       },
+      "System.Memory/4.5.4": {},
       "System.Net.Http/4.3.4": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
@@ -1706,14 +1829,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Reflection.Emit.Lightweight/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {},
       "System.Reflection.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
@@ -1779,6 +1895,13 @@
           "System.Runtime.InteropServices": "4.3.0",
           "System.Threading": "4.3.0",
           "runtime.native.System": "4.3.0"
+        }
+      },
+      "System.Runtime.Loader/4.3.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.0"
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -2012,6 +2135,17 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Threading.Channels/4.7.1": {
+        "runtime": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.700.20.21406"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.0/System.Threading.Channels.dll": {}
+        }
+      },
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
@@ -2051,7 +2185,8 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Xml.ReaderWriter/4.3.0": {
+      "System.ValueTuple/4.5.0": {},
+      "System.Xml.ReaderWriter/4.3.1": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
@@ -2083,7 +2218,7 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
-          "System.Xml.ReaderWriter": "4.3.0"
+          "System.Xml.ReaderWriter": "4.3.1"
         }
       },
       "Kanbersky.EventStore.Core/1.0.0": {
@@ -2094,11 +2229,14 @@
           "EventStore.Client": "5.0.9",
           "FluentValidation": "9.3.0",
           "FluentValidation.AspNetCore": "9.3.0",
+          "MassTransit": "7.1.2",
+          "MassTransit.RabbitMQ": "7.1.2",
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "3.1.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.10",
           "Microsoft.OpenApi": "1.2.3",
+          "RabbitMQ.Client": "6.2.1",
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "3.4.0",
           "Serilog.Enrichers.CorrelationId": "3.0.1",
@@ -3194,7 +3332,7 @@
         },
         "compileOnly": true
       },
-      "System.Memory/4.2.1.0": {
+      "System.Memory.Reference/4.2.1.0": {
         "compile": {
           "System.Memory.dll": {}
         },
@@ -3446,7 +3584,7 @@
         },
         "compileOnly": true
       },
-      "System.Runtime.Loader/4.1.1.0": {
+      "System.Runtime.Loader.Reference/4.1.1.0": {
         "compile": {
           "System.Runtime.Loader.dll": {}
         },
@@ -3620,12 +3758,6 @@
         },
         "compileOnly": true
       },
-      "System.Threading.Channels/4.0.2.0": {
-        "compile": {
-          "System.Threading.Channels.dll": {}
-        },
-        "compileOnly": true
-      },
       "System.Threading.Reference/4.1.2.0": {
         "compile": {
           "System.Threading.dll": {}
@@ -3692,7 +3824,7 @@
         },
         "compileOnly": true
       },
-      "System.ValueTuple/4.0.3.0": {
+      "System.ValueTuple.Reference/4.0.3.0": {
         "compile": {
           "System.ValueTuple.dll": {}
         },
@@ -3796,6 +3928,13 @@
       "sha512": "sha512-uMgbqOdu9ZG5cIOty0C85hzzayBH2i9BthnS5FlMqKtMSHDv4ts81a2jS1VFaDBVhlBeIqJ/kQKjQY95BZde9w==",
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
+    },
+    "Automatonymous/5.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+gPEJZTMNlxdunodkcIiMvhgypk5v+dCaApXP1M3DkeOcZyPfJXQJaO2055ywL2M2yTYfpFs8hukzg445IX/bg==",
+      "path": "automatonymous/5.1.0",
+      "hashPath": "automatonymous.5.1.0.nupkg.sha512"
     },
     "Ben.Demystifier/0.1.6": {
       "type": "package",
@@ -3909,6 +4048,27 @@
       "path": "fluentvalidation.dependencyinjectionextensions/9.3.0",
       "hashPath": "fluentvalidation.dependencyinjectionextensions.9.3.0.nupkg.sha512"
     },
+    "GreenPipes/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8tn5bc/yFwRgs/8CSGkFydvovHMgZoY5/PPPVyDCh/z5sZg+TYHCm4Zm8t3BczqF66O2LFq9R4Zr8cpjhp9GWQ==",
+      "path": "greenpipes/4.0.0",
+      "hashPath": "greenpipes.4.0.0.nupkg.sha512"
+    },
+    "MassTransit/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SzY52KtmvFBbHSzLj03ACg8e5Ig5o00ccqUNyVGpUxlajAjtKgKe+MWxzLef8ddCTCRmuNdjbSXxNuYDGRA0cQ==",
+      "path": "masstransit/7.1.2",
+      "hashPath": "masstransit.7.1.2.nupkg.sha512"
+    },
+    "MassTransit.RabbitMQ/7.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RmPeconrikKyN9gpvYULNF8YppG9CeJLAcMeFuWAbMeCTSUrwnk7pQ2F9PjmtpmnvIuY9PZMlqYQnw1BPlgP0g==",
+      "path": "masstransit.rabbitmq/7.1.2",
+      "hashPath": "masstransit.rabbitmq.7.1.2.nupkg.sha512"
+    },
     "MediatR/9.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3950,6 +4110,13 @@
       "sha512": "sha512-9ErxAAKaDzxXASB/b5uLEkLgUWv1QbeVxyJYEHQwMaxXOeFFVkQxiq8RyfVcifLU7NR0QY0p3acqx4ZpYfhHDg==",
       "path": "microsoft.aspnetcore.webutilities/2.2.0",
       "hashPath": "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.Bcl.AsyncInterfaces/1.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w==",
+      "path": "microsoft.bcl.asyncinterfaces/1.1.1",
+      "hashPath": "microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",
@@ -4126,12 +4293,26 @@
       "path": "netstandard.library/1.6.1",
       "hashPath": "netstandard.library.1.6.1.nupkg.sha512"
     },
+    "NewId/3.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-72cBqYQ+pZpsfuTerhi5Q/ZkfK81s/Dkz2u0WNytirWVLktUm6sy4mRNepM+DL1AB0V61QlYesZHDf0wlmMU5A==",
+      "path": "newid/3.0.3",
+      "hashPath": "newid.3.0.3.nupkg.sha512"
+    },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "path": "newtonsoft.json/11.0.2",
       "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
+    },
+    "Newtonsoft.Json.Bson/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5PYT/IqQ+UK31AmZiSS102R6EsTo+LGTSI8bp7WAUqDKaF4wHXD8U9u4WxTI1vc64tYi++8p3dk3WWNqPFgldw==",
+      "path": "newtonsoft.json.bson/1.0.1",
+      "hashPath": "newtonsoft.json.bson.1.0.1.nupkg.sha512"
     },
     "OpenTracing.Signed/0.10.4": {
       "type": "package",
@@ -4146,6 +4327,13 @@
       "sha512": "sha512-j37MD1p1s9NdX8P5+IaY2J9p2382xiL1VP3mxYu0g+G/kf2YM2grFa1jJPO+0WDJNl1XhNPO0Q5yBEcbX77hBQ==",
       "path": "protobuf-net/2.4.0",
       "hashPath": "protobuf-net.2.4.0.nupkg.sha512"
+    },
+    "RabbitMQ.Client/6.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kdcin0uz1b9xQPvlLOoa8Y2zQsfu7nRuTrcX02dCLVzwGVlsPp9AFgu1L3kRh4wSFEOGE03OVqpWKxaDlhuowQ==",
+      "path": "rabbitmq.client/6.2.1",
+      "hashPath": "rabbitmq.client.6.2.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
@@ -4546,6 +4734,13 @@
       "path": "system.linq.expressions/4.3.0",
       "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
     },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
+    },
     "System.Net.Http/4.3.4": {
       "type": "package",
       "serviceable": true,
@@ -4637,12 +4832,12 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit.Lightweight/4.3.0": {
+    "System.Reflection.Emit.Lightweight/4.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
-      "path": "system.reflection.emit.lightweight/4.3.0",
-      "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
+      "sha512": "sha512-a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "hashPath": "system.reflection.emit.lightweight.4.7.0.nupkg.sha512"
     },
     "System.Reflection.Extensions/4.3.0": {
       "type": "package",
@@ -4713,6 +4908,13 @@
       "sha512": "sha512-cbz4YJMqRDR7oLeMRbdYv7mYzc++17lNhScCX0goO2XpGWdvAt60CGN+FHdePUEHCe/Jy9jUlvNAiNdM+7jsOw==",
       "path": "system.runtime.interopservices.runtimeinformation/4.3.0",
       "hashPath": "system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Loader/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DHMaRn8D8YCK2GG2pw+UzNxn/OHVfaWx7OTLBD/hPegHZZgcZh3H6seWegrC4BYwsfuGrywIuT+MQs+rPqRLTQ==",
+      "path": "system.runtime.loader/4.3.0",
+      "hashPath": "system.runtime.loader.4.3.0.nupkg.sha512"
     },
     "System.Runtime.Numerics/4.3.0": {
       "type": "package",
@@ -4861,6 +5063,13 @@
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
     },
+    "System.Threading.Channels/4.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6akRtHK/wab3246t4p5v3HQrtQk8LboOt5T4dtpNgsp3zvDeM4/Gx8V12t0h+c/W9/enUrilk8n6EQqdQorZAA==",
+      "path": "system.threading.channels/4.7.1",
+      "hashPath": "system.threading.channels.4.7.1.nupkg.sha512"
+    },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -4910,12 +5119,19 @@
       "path": "system.threading.timer/4.3.0",
       "hashPath": "system.threading.timer.4.3.0.nupkg.sha512"
     },
-    "System.Xml.ReaderWriter/4.3.0": {
+    "System.ValueTuple/4.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GrprA+Z0RUXaR4N7/eW71j1rgMnEnEVlgii49GZyAjTH7uliMnrOU3HNFBr6fEDBCJCIdlVNq9hHbaDR621XBA==",
-      "path": "system.xml.readerwriter/4.3.0",
-      "hashPath": "system.xml.readerwriter.4.3.0.nupkg.sha512"
+      "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
+      "path": "system.valuetuple/4.5.0",
+      "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "System.Xml.ReaderWriter/4.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fVU1Xp9TEOHv1neQDtcJ4hNfYJ1pjfXzKY3VFeiRZK6HTV4Af2Ihyvq1FkPLrL1hzZhXv7NTmowQnL5DgTzIKA==",
+      "path": "system.xml.readerwriter/4.3.1",
+      "hashPath": "system.xml.readerwriter.4.3.1.nupkg.sha512"
     },
     "System.Xml.XDocument/4.3.0": {
       "type": "package",
@@ -5814,7 +6030,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Memory/4.2.1.0": {
+    "System.Memory.Reference/4.2.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6024,7 +6240,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Runtime.Loader/4.1.1.0": {
+    "System.Runtime.Loader.Reference/4.1.1.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -6169,11 +6385,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Threading.Channels/4.0.2.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
     "System.Threading.Reference/4.1.2.0": {
       "type": "referenceassembly",
       "serviceable": false,
@@ -6229,7 +6440,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.ValueTuple/4.0.3.0": {
+    "System.ValueTuple.Reference/4.0.3.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
